@@ -1,0 +1,4 @@
+#!/bin/bash
+NAME="whisper-$$"
+trap -- "docker rm -f $NAME >& /dev/null" EXIT
+docker run -i --rm --name $NAME whisper whisper "$@"

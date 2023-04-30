@@ -1,0 +1,17 @@
+version: "3.8"
+
+# sudo DOCKER_BUILDKIT=1 docker build . -t whisper
+
+services:
+  whisper-local:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        database: mysql
+    environment:
+      - DOCKER_BUILDKIT=1
+    container_name: whisper
+    image: whisper:latest
+    restart: always
+
