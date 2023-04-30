@@ -3,7 +3,7 @@ version: "3.8"
 # sudo DOCKER_BUILDKIT=1 docker build . -t whisper
 
 services:
-  whisper-local:
+  whisper:
     build:
       context: .
       dockerfile: Dockerfile
